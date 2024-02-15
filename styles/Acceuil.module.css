@@ -9,19 +9,21 @@
     flex-direction: column;
     justify-content: space-between;
     width: 25%;
+    padding: 30px;
 }
 
 .home {
     width: 55%;
+    padding: 10px 0px;
 }
 
 .trends {
     width: 30%;
+    padding: 10px 30px;
 }
 
 .nav, .home {
     border-right: 0.5px solid rgba(255, 255, 255, 0.226);
-    padding: 30px;
 }
 
 .logo {
@@ -76,3 +78,56 @@
     border: 0.5px solid #40bbea;
     border-radius: 20px;
   }
+
+  .tweet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 20px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.226);
+
+  }
+
+  .tweetInput {
+    color: white;
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid grey;
+  }
+
+  .tweetInput:focus{
+    outline: none;
+  }
+
+  .tweetSend{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  .tweetBtn {
+    width: 10rem;
+    color: #40bbea;
+    font-family: "Montserrat" sans-serif;
+    font-size: 1rem;
+    font-weight:700;
+    background-color: transparent;
+    padding: 10px;
+    margin: 20px 0px;
+    border: 0.5px solid whitesmoke;
+    border-radius: 20px;
+  }
+  
+  .tweetBtn:hover {
+    width: 10rem;
+    color: white;
+    font-family: "Montserrat" sans-serif;
+    font-size: 1rem;
+    font-weight:700;
+    background-color: #40bbea;
+    padding: 10px;
+    border: 0.5px solid #40bbea;
+    border-radius: 20px;
+}

@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Login.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
-function Home() {
+function Login() {
+  
+
   return (
     <div className={styles.main}>
     <div className={styles.image}></div>
@@ -26,4 +28,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Login;

@@ -21,8 +21,17 @@ function Acceuil() {
         </div>
     </div>
     <div className={styles.home}>
+        <h4>Home</h4>
+        <div className={styles.tweet}>
+            <input className={styles.tweetInput} type='text' placeholder='type your tweet...'/>
+           <div className={styles.tweetSend}>
+           <h3>0/280</h3>
+            <button className={styles.tweetBtn}>Tweet</button>
+           </div>
+        </div>
     </div>
     <div className={styles.trends}>
+    <h3>Trends</h3>
     </div>
   </div>
   )
