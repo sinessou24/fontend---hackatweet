@@ -1,0 +1,68 @@
+.main {
+    background-color: black;
+    align-items: flex-start;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 50px;
+}
+
+.input {
+    margin: 10px 10px;
+    color: white;
+    width: 20vw;
+    padding: 15px;
+    background-color: transparent;
+    border: transparent;
+    border: 1px solid grey;
+}
+
+.signUpButton {
+  width: 10rem;
+  color: #40bbea;
+  font-family: "Montserrat" sans-serif;
+  font-size: 1rem;
+  font-weight:700;
+  background-color: transparent;
+  padding: 10px;
+  margin: 35px 10px;
+  border: 1px solid white;
+    border-radius: 20px;
+}
+
+.signUpButton:hover {
+    width: 10rem;
+    color: white;
+    font-family: "Montserrat" sans-serif;
+    font-size: 1rem;
+    font-weight:700;
+    background-color: #40bbea;
+    padding: 10px;
+    border: 1px solid #40bbea;
+      border-radius: 20px;
+  }
+
+  .goBackBtn {
+    margin: 0 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+
+  .goBackBtn:hover {
+    margin: 0 10px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .leftArrow {
+    color: white;
+    padding: 10px;
+  }
+
+  .leftArrow:hover {
+    padding: 10px;
+    color: #161D28;
+  }

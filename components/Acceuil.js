@@ -7,7 +7,7 @@ function Acceuil() {
   return (
     <div className={styles.main}>
     <div className={styles.nav}>
-        <img className={styles.logo} src='logo_twitter.png'/>
+        <img className={styles.logo} src='twittrix.gif'/>
         <div className={styles.user}>
             <div className={styles.profile}>
             <FontAwesomeIcon className={styles.profilePicture} icon={faEgg} style={{color: "white"}}/>
@@ -17,7 +17,7 @@ function Acceuil() {
                 <p className={styles.username}>@username</p>
             </div>
             </div>
-            <button className={styles.logout}>Logout</button>
+            <button className={styles.logout}>Red Pills</button>
         </div>
     </div>
     <div className={styles.home}>

@@ -1,24 +1,25 @@
 .main {
   display: flex;
   min-height: 100vh;
-  background-color: #161D28;
+  background-color: black;
 }
 
 .image {
-  width: 40%;
-  background-image: url(../public/home_Background.png);
+  width: 60%;
+  background-image: url(../public/matrix_blue_gif.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .access {
-  width: 60%;
+  width: 40%;
   padding-left: 3vw;
 }
 
 .logo {
-  margin-top: 5vh;
+  width: 10vw;
+  margin-top: 3vh;
   rotate: 180deg;
 }
 
@@ -46,15 +47,19 @@
     border-radius: 20px;
 }
 
+.already {
+  margin-top: 5vh;
+}
+
 .signInButton {
   width: 10rem;
-  color: #40bbea;
+  color: #0b5633;
   font-family: "Montserrat" sans-serif;
   font-size: 1rem;
   font-weight:700;
   background-color: transparent;
   padding: 10px;
-  border: 0.5px solid whitesmoke;
+  border: 0.5px solid #0b5633;
   border-radius: 20px;
 }
 
@@ -64,8 +69,8 @@
   font-family: "Montserrat" sans-serif;
   font-size: 1rem;
   font-weight:700;
-  background-color: #40bbea;
+  background-color: #0b5633;
   padding: 10px;
-  border: 0.5px solid #40bbea;
+  border: 0.5px solid #0b5633;
   border-radius: 20px;
 }
