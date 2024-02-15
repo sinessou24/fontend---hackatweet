@@ -1,0 +1,78 @@
+.main {
+    display: flex;
+    min-height: 100vh;
+    background-color: #161D28;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.home {
+    width: 55%;
+}
+
+.trends {
+    width: 30%;
+}
+
+.nav, .home {
+    border-right: 0.5px solid rgba(255, 255, 255, 0.226);
+    padding: 30px;
+}
+
+.logo {
+    width: 50px;
+    rotate: 180deg;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profilePicture {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: grey;
+}
+
+.names {
+    padding: 20px;
+    color: white;
+}
+
+.firstname {
+    font-family: "Montserrat" sans-serif;
+    font-weight: 700;
+    margin-bottom: -20px;
+}
+
+.logout {
+    width: 10rem;
+    color: #40bbea;
+    font-family: "Montserrat" sans-serif;
+    font-size: 1rem;
+    font-weight:700;
+    background-color: transparent;
+    padding: 10px;
+    border: 0.5px solid whitesmoke;
+    border-radius: 20px;
+  }
+  
+  .logout:hover {
+    width: 10rem;
+    color: white;
+    font-family: "Montserrat" sans-serif;
+    font-size: 1rem;
+    font-weight:700;
+    background-color: #40bbea;
+    padding: 10px;
+    border: 0.5px solid #40bbea;
+    border-radius: 20px;
+  }
