@@ -27,6 +27,24 @@
     border-right: 0.5px solid rgba(255, 255, 255, 0.226);
 }
 
+.nav, .home {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 20%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+
 .logo {
     width: 50px;
     rotate: 180deg;
@@ -164,4 +182,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.trendsContent {
+  padding: 20px;
 }

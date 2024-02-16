@@ -20,13 +20,15 @@ function Acceuil() {
     const [AllTweets, setAllTweets] = useState([]);
     const [newTweet, setNewTweet] = useState(false)
 
-    const router = useRouter();
+    const router2 = useRouter();
 
     console.log({AllTweets});
 
     const handleSignIn = () => {
-        router.push('/'); // Navigue vers la page /signup
+        router2.push('/'); // Navigue vers la page /signup
       }
+    
+    
 
 
     const tweetClick = () => {
@@ -66,6 +68,7 @@ function Acceuil() {
 
     const LogoutClick = () => {
 		dispatch(logout());
+        handleSignIn();    
 	};
 
     console.log(user.token);
@@ -83,7 +86,7 @@ function Acceuil() {
                 <p className={styles.username}>@username</p>
             </div>
             </div>
-            <button onClick={() => LogoutClick} className={styles.logout}>Red Pills</button>
+            <button onClick={LogoutClick} className={styles.logout}>Red Pills</button>
         </div>
     </div>
     <div className={styles.home}>
@@ -121,6 +124,14 @@ function Acceuil() {
     </div>
     <div className={styles.trends}>
     <h3>Trends</h3>
+    <div className={styles.cardTweet}>
+                <div className={styles.likeAndTweet}>
+                <p className={styles.trendsContent}>#firsttweet</p>
+                <p className={styles.trendsContent}>#secondtweet</p>
+                <p className={styles.trendsContent}>#thirdtweet</p>
+                </div>
+                {/* Afficher d'autres informations sur le tweet si nécessaire */}
+            </div>
     </div>
   </div>
   )

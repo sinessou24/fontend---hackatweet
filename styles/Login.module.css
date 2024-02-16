@@ -4,6 +4,23 @@
   background-color: black;
 }
 
+.main {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-right: 20%;
+    opacity: 0;
+  }
+
+  to {
+    margin-right: 0%;
+    opacity: 1;
+  }
+}
+
 .image {
   width: 60%;
   background-image: url(../public/matrix_blue_gif.gif);
