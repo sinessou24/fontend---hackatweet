@@ -85,7 +85,7 @@ function Acceuil() {
         <div className={styles.AllTweets}>
         {AllTweets?.map(tweet => (
             <div key={tweet._id} className={styles.tweet}>
-                <p>{tweet.message}</p>
+                <p className={styles.cardTweet}>{tweet.message}</p>
                 {/* Afficher d'autres informations sur le tweet si nécessaire */}
             </div>
         ))}
