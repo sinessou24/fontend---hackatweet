@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEgg } from '@fortawesome/free-solid-svg-icons';
 import Tweet from '../../backend/models/tweets';
+import { useRouter } from 'next/router';
 
 function Acceuil() {
     const dispatch = useDispatch();
@@ -18,7 +19,13 @@ function Acceuil() {
     const [AllTweets, setAllTweets] = useState([]);
     const [newTweet, setNewTweet] = useState(false)
 
+    const router = useRouter();
+
     console.log({AllTweets});
+
+    const handleSignIn = () => {
+        router.push('/'); // Navigue vers la page /signup
+      }
 
 
     const tweetClick = () => {
@@ -70,7 +77,7 @@ function Acceuil() {
                 <p className={styles.username}>@username</p>
             </div>
             </div>
-            <button className={styles.logout}>Red Pills</button>
+            <button onClick={handleSignIn} className={styles.logout}>Red Pills</button>
         </div>
     </div>
     <div className={styles.home}>

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Acceuil from './Acceuil';
+import { useRouter } from 'next/router';
 
 function SignUp() {
     const dispatch = useDispatch();
@@ -14,6 +15,14 @@ function SignUp() {
     const [signUpfirstname, setSignUpFirstname] = useState('');
     const [signUpUsername, setSignUpUsername] = useState('');
 	const [signUpPassword, setSignUpPassword] = useState('');
+
+    const router = useRouter();
+
+
+
+    
+    
+
 
     const signUpClick = () => {
         fetch('http://localhost:3000/users/signup', {
@@ -27,6 +36,8 @@ function SignUp() {
                         setSignUpFirstname('');
                         setSignUpUsername('');
                         setSignUpPassword('');
+                        router.push('/acceuil'); // Navigue vers la page /signup
+        
                     }
                 });
       }
