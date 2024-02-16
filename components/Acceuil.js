@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from '../styles/Acceuil.module.css';
 import { useDispatch, useSelector } from 'react-redux';
+import { login, logout } from '../reducers/users';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEgg } from '@fortawesome/free-solid-svg-icons';
+import { faEgg, faHeart, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import Tweet from '../../backend/models/tweets';
 
 function Acceuil() {
@@ -56,6 +57,11 @@ function Acceuil() {
             });
     }, [newTweet]); // Le tableau vide en tant que dépendance signifie que cette requête est exécutée une seule fois lors du montage du composant
 
+    const LogoutClick = () => {
+		dispatch(logout());
+	};
+
+    console.log(user.token);
 
   return (
     <div className={styles.main}>
@@ -70,7 +76,7 @@ function Acceuil() {
                 <p className={styles.username}>@username</p>
             </div>
             </div>
-            <button className={styles.logout}>Red Pills</button>
+            <button onClick={() => LogoutClick} className={styles.logout}>Red Pills</button>
         </div>
     </div>
     <div className={styles.home}>
@@ -84,8 +90,23 @@ function Acceuil() {
         </div>
         <div className={styles.AllTweets}>
         {AllTweets?.map(tweet => (
-            <div key={tweet._id} className={styles.tweet}>
-                <p className={styles.cardTweet}>{tweet.message}</p>
+                <div key={tweet._id} className={styles.cardTweet}>
+                <div className={styles.tweetHead}>
+                <div className={styles.profile}>
+                <FontAwesomeIcon className={styles.profilePicture} icon={faEgg} style={{color: "white"}}/>
+                {/* <img src='logo_twitter.png' className={styles.profilePicture}/>  */}
+                <div className={styles.names}>
+                <p className={styles.firstname}>{tweet.user}</p>
+                <p className={styles.username}>@username</p>
+                </div>
+                 </div>
+                 <span>{tweet.date}</span>
+                </div>
+                <div className={styles.likeAndTweet}>
+                <p className={styles.messageContent}>{tweet.message}</p>
+                <FontAwesomeIcon className={styles.icons} icon={faHeart} style={{color: "#ffffff",}} />
+                <FontAwesomeIcon icon={faTrashCan} style={{color: "#ffffff",}} />
+                </div>
                 {/* Afficher d'autres informations sur le tweet si nécessaire */}
             </div>
         ))}
