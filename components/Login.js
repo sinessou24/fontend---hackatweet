@@ -2,13 +2,15 @@ import React from 'react';
 import styles from '../styles/Login.module.css';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
 
 function Login() {
+
   const [signUp, setSignUp] = useState(false);
   const [signIn, setSignIn] = useState(false);
+
 
   
 
@@ -20,6 +22,10 @@ function Login() {
     setSignIn(true)
   }
 
+  const closeModale = () => {
+    setSignUp(false)
+    setSignIn(false)
+  }
 
 
 
@@ -43,12 +49,16 @@ function Login() {
               </div>
             </div>}
             {signUp &&
+            <div className={styles.signModale}>
               <SignUp />
-              
+              <FontAwesomeIcon onClick={() => closeModale()} className={styles.leftArrow} icon={faArrowLeft} />
+              </div>
               }
             {signIn &&
+            <div className={styles.signModale}>
               <SignIn />
-              
+              <FontAwesomeIcon onClick={() => closeModale()} className={styles.leftArrow} icon={faArrowLeft} />
+              </div>
               }
       </div>
   </div>
