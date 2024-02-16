@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../reducers/users';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useRouter } from 'next/router';
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -12,6 +13,9 @@ function SignIn() {
 
   const [signInUsername, setSignInUsername] = useState('');
 	const [signInPassword, setSignInPassword] = useState('');
+
+	const router2 = useRouter();
+
 
   const signInClick = () => {
 
@@ -25,6 +29,7 @@ function SignIn() {
 					dispatch(login({ username: signInUsername, token: data.token }));
 					setSignInUsername('');
 					setSignInPassword('');
+					router2.push('/acceuil'); // Navigue vers la page /signup
 				}
 			});
 	};
